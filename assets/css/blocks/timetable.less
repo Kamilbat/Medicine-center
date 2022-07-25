@@ -1,0 +1,233 @@
+//main: ../styles.less
+
+.timetable {
+    margin-bottom: 105px;
+}
+
+.timetable__block {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.timetable__trainings__block {
+    margin-top: 30px;
+}
+
+.timetable__title {
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.timetable__trainings__item {
+    background: #fff;
+    border-radius: 7px;
+    width: 470px;
+    padding: 28px;
+    margin-bottom: 15px;
+    transition: .5s ease;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.active .timetable__trainings__content {
+        display: block;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 4px 13px rgba(32, 119, 51, 0.25));
+    }
+}
+
+.timetable__trainings__header {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+
+    &:before,
+    &:after{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        position: absolute;
+        background: #407C46;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &:before {
+        right: 60px;
+        transform: rotate(45deg);
+    }
+    &:after {
+        right: 46px;
+        transform: rotate(-45deg);
+    }
+}
+
+.timetable__name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 105.4%;
+    font-family: 'Montserrat', sans-serif;
+    white-space: pre-line;
+    display: block;
+}
+
+.timetable__trainings__content {
+    margin-top: 25px;
+    display: none;
+}
+
+.timetable__span {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 105.4%;
+    text-align: center;
+    display: block;
+    white-space: pre-line;
+    margin-bottom: 5px;
+}
+
+.timetable__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 105.4%;
+    margin: 24px 0 31px;
+    text-align: center;
+}
+
+.timetable__button {
+    background: #62A469;
+    border-radius: 12px;
+    width: 170px;
+    height: 55px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0;
+    transition: .5s ease;
+
+    &:hover {
+        background: #A9DB90;
+        color: #F1FEE2;
+    }
+}
+
+//--------timetable__articles--------//
+
+.timetable__articles__block {
+    width: 370px;
+    border: 1px solid #7E7E7E;
+    padding: 27px 15px;
+    margin-top: 55px;
+}
+
+.timetable__articles__item {
+    margin-bottom: 67px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.timetable__date {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@media(max-width:480px) {
+
+    .timetable__trainings__block {
+        margin-top: 48px;
+        margin-bottom: 30px;
+    }
+
+    .timetable__trainings__item {
+        padding: 18px 28px;
+        width: 100%;
+    }
+
+    .timetable__trainings {
+        width: 100%;
+    }
+
+    .timetable__trainings__header {
+
+        &:before {
+            right: 20px;
+        }
+        &:after {
+            right: 6px;
+        }
+    }
+
+    .timetable__articles__block {
+        width: 340px;
+    }
+
+    .timetable__articles__item {
+        margin-bottom: 30px;
+    }
+
+    .timetable__date {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+}
+
+@media(max-width:360px) {
+
+    .timetable {
+        margin-bottom: 55px;
+    }
+
+    .timetable__name {
+        font-size: 16px;
+    }
+
+    .timetable__trainings__block {
+        margin-bottom: 10px;
+    }
+
+    .timetable__trainings__header {
+
+        &:before,
+        &:after {
+            width: 15px;
+        }
+
+        &:before {
+            right: 17px;
+        }
+    }
+
+    .timetable__articles {
+        width: 100%;
+    }
+
+    .timetable__articles__block {
+        margin-top: 36px;
+        width: 100%;
+    }
+
+    .timetable__name {
+        font-size: 16px;
+    }
+
+    .timetable__articles__item {
+        margin-bottom: 40px;
+    }
+
+}

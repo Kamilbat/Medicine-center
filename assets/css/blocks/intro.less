@@ -1,0 +1,169 @@
+//main: ../styles.less
+
+.intro {
+    margin-bottom: 90px;
+}
+
+.intro__block {
+    border-radius: 51px;
+    width: 100%;
+    position: relative;
+    background: #A8DB8F url("../images/intro-woman.png") right 30px bottom no-repeat;
+    background-size: 509px 550px;
+}
+
+.intro__content {
+    padding: 150px 0px 130px 60px;
+}
+
+.intro__title {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 108.9%;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+.intro__subtitle {
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+    white-space: pre-line;
+}
+
+.intro__button {
+    width: 219px;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #62A469;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 108.02%;
+    color: #fff;
+    transition: .5s ease;
+
+    &:hover {
+        background: none;
+        color: #000000;
+        border: 1px solid #000000;
+    }
+}
+
+.intro__image {
+    position: absolute;
+    & img {
+        height: 621px;
+    }
+}
+
+@media(max-width:1200px) {
+
+    .intro__block {
+        background-position: bottom right;
+        background-size: 409px 450px;
+    }
+
+    .intro__title {
+        font-size: 55px;
+    }
+
+    .intro__content {
+        padding: 80px 0 130px 30px;
+    }
+}
+@media(max-width:990px) {
+    .intro__content {
+        padding: 60px 0 300px 30px;
+    }
+
+    .intro__block {
+        background-size: 350px 400px;
+        background-position: bottom center;
+    }
+}
+
+@media(max-width:767px) {
+    .intro {
+        background-color: #A8DB8F;
+        border-radius: 51px;
+        margin-bottom: 70px;
+    }
+    .intro__content {
+        padding: 60px 0 400px 0px;
+        text-align: center;
+    }
+
+    .intro__title {
+        font-size: 50px;
+    }
+
+    .intro__block {
+        background-size: 350px 400px;
+        background-position: bottom center;
+    }
+
+    .intro__button {
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:600px) {
+    .intro__title {
+        font-size: 43px;
+    }
+}
+
+@media(max-width:480px) {
+
+    .intro {
+        border-radius: 36px;
+        margin-bottom: 46px;
+    }
+
+    .intro__block {
+        background-size: 260px 300px;
+        background-position: center bottom;
+        border-radius: 36px;
+    }
+
+    .intro__content {
+        padding: 64px 0 320px;
+    }
+
+    .intro__title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .intro__subtitle {
+        text-align: center;
+        white-space: normal;
+        margin-bottom: 30px;
+    }
+
+    .intro__button {
+        margin: 0 auto;
+        width: 250px;
+        font-weight: 300;
+    }
+}
+
+@media(max-width:360px) {
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__subtitle {
+        font-size: 20px;
+    }
+
+    .intro__button {
+        width: 200px;
+    }
+}
+
